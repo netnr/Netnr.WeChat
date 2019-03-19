@@ -1622,43 +1622,44 @@
             <param name="nodeName">节点名称</param>
             <returns></returns>
         </member>
-        <member name="M:Netnr.WeChat.HttpTo.HWRequest(System.String,System.String,System.String)">
+        <member name="T:Netnr.WeChat.HttpTo">
             <summary>
-            发送请求参数设置
+            HTTP请求
+            </summary>
+        </member>
+        <member name="M:Netnr.WeChat.HttpTo.HWRequest(System.String,System.String,System.String,System.String)">
+            <summary>
+            HttpWebRequest对象
             </summary>
             <param name="url">地址</param>
-            <param name="type">请求类型 默认GET </param>
-            <param name="postData">POST发送内容 默认空</param>
+            <param name="type">请求类型，默认GET</param>
+            <param name="data">POST数据</param>
+            <param name="charset">编码，默认utf-8</param>
             <returns></returns>
         </member>
-        <member name="M:Netnr.WeChat.HttpTo.Url(System.Net.HttpWebRequest,System.Text.Encoding)">
+        <member name="M:Netnr.WeChat.HttpTo.Url(System.Net.HttpWebRequest,System.String)">
             <summary>
-            发送请求 得到请求结果
+            HTTP请求
             </summary>
-            <param name="request">HttpWebRequest对象 可通过HWRequest方法创建</param>
-            <param name="e">返回类容编码 默认UTF-8</param>
+            <param name="request">HttpWebRequest对象</param>
+            <param name="charset">编码，默认utf-8</param>
             <returns></returns>
         </member>
-        <member name="M:Netnr.WeChat.HttpTo.Url(System.Net.HttpWebRequest)">
+        <member name="M:Netnr.WeChat.HttpTo.Get(System.String,System.String)">
             <summary>
-            发送请求 得到请求结果
+            GET请求
             </summary>
-            <param name="request">HttpWebRequest对象 可通过HWRequest方法创建</param>
+            <param name="url">地址</param>
+            <param name="charset">编码，默认utf-8</param>
             <returns></returns>
         </member>
-        <member name="M:Netnr.WeChat.HttpTo.Get(System.String)">
+        <member name="M:Netnr.WeChat.HttpTo.Post(System.String,System.String,System.String)">
             <summary>
-            发送 GET 请求 得到请求结果
+            POST请求
             </summary>
-            <param name="url">URL</param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.HttpTo.Post(System.String,System.String)">
-            <summary>
-            发送 POST 请求
-            </summary>
-            <param name="url">URL</param>
-            <param name="postData">发送内容</param>
+            <param name="url">地址</param>
+            <param name="data">POST数据</param>
+            <param name="charset">编码，默认utf-8</param>
             <returns></returns>
         </member>
         <member name="M:Netnr.WeChat.IWeChatExecutor.Execute(Netnr.WeChat.WeChatMessage)">

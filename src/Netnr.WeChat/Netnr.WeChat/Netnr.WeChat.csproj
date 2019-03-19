@@ -11,10 +11,12 @@
     <PackageIconUrl>https://raw.githubusercontent.com/netnr/static/master/favicon.ico</PackageIconUrl>
     <PackageTags>netnr wechat weixin 微信 公众号</PackageTags>
     <PackageReleaseNotes>支持 .net core 与 .net framework</PackageReleaseNotes>
+    <DocumentationFile>H:\ROOM\Netnr.WeChat\src\Netnr.WeChat\Netnr.WeChat\Netnr.WeChat.xml</DocumentationFile>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net40|AnyCPU'">
-    <DocumentationFile>D:\ROOM\Netnr.WeChat\Netnr.WeChat\Netnr.WeChat.xml</DocumentationFile>
+    <DefineConstants>TRACE;DEBUG;NET40</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
