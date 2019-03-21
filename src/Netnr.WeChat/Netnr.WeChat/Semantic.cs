@@ -34,7 +34,7 @@ namespace Netnr.WeChat
                     .Append('"' + "uid" + '"' + ":").Append(uid).Append(",")
                     .Append("}");
 
-                var result = HttpTo.Post(string.Format("https://api.weixin.qq.com/semantic/semproxy/search?access_token={0}", access_token), builder.ToString());
+                var result = Core.HttpTo.Post(string.Format("https://api.weixin.qq.com/semantic/semproxy/search?access_token={0}", access_token), builder.ToString());
                 return result;
             }
         }

@@ -26,7 +26,7 @@ namespace Netnr.WeChat
             sb.Append("{")
                 .Append('"' + "card_id" + '"' + ":").Append(card_id)
                 .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
             return result;
         }
 
@@ -63,7 +63,7 @@ namespace Netnr.WeChat
                 sb.Append('"' + "card_id" + '"' + ":").Append(card_id);
             }
             sb.Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
             return result;
         }
 
@@ -87,7 +87,7 @@ namespace Netnr.WeChat
               .Append('"' + "offset" + '"' + ":").Append(offset)
               .Append('"' + "count" + '"' + ":").Append(count)
               .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
             return result;
         }
 
@@ -146,7 +146,7 @@ namespace Netnr.WeChat
             sb.Append("{")
               .Append('"' + "card_id" + '"' + ":").Append(card_id)
               .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
             return result;
         }
 
@@ -182,7 +182,7 @@ namespace Netnr.WeChat
         public static string Update(string access_token, object new_card)
         {
             var url = string.Format("https://api.weixin.qq.com/card/update?access_token={0}", access_token);
-            var result = HttpTo.Post(url, new_card.ToJson());
+            var result = Core.HttpTo.Post(url, new_card.ToJson());
             return result;
         }
 
@@ -210,7 +210,7 @@ namespace Netnr.WeChat
              .Append('"' + "increase_stock_value" + '"' + ":").Append(increase_stock_value)
              .Append('"' + "reduce_stock_value" + '"' + ":").Append(reduce_stock_value)
              .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
 
             return result;
         }
@@ -244,7 +244,7 @@ namespace Netnr.WeChat
         {
             var url = string.Format("https://api.weixin.qq.com/card/getcolors?access_token={0}", access_token);
 
-            var result = HttpTo.Get(url);
+            var result = Core.HttpTo.Get(url);
 
             return result;
         }
@@ -306,7 +306,7 @@ namespace Netnr.WeChat
         public static string Create(string access_token, object card)
         {
             var url = string.Format("https://api.weixin.qq.com/card/create?access_token={0}", access_token);
-            var result = HttpTo.Post(url, card.ToJson());
+            var result = Core.HttpTo.Post(url, card.ToJson());
             return result;
         }
 
@@ -364,7 +364,7 @@ namespace Netnr.WeChat
             public static string CheckIn(string access_token, object tickect)
             {
                 var url = string.Format("https://api.weixin.qq.com/card/boardingpass/checkin?access_token={0}", access_token);
-                var result = HttpTo.Post(url, tickect.ToJson());
+                var result = Core.HttpTo.Post(url, tickect.ToJson());
                 return result;
             }
         }
@@ -402,7 +402,7 @@ namespace Netnr.WeChat
                     .Append('"' + "code" + '"' + ":").Append(code)
                     .Append('"' + "card_id" + '"' + ":").Append(card_id)
                     .Append("}");
-                var result = HttpTo.Post(url, sb.ToString());
+                var result = Core.HttpTo.Post(url, sb.ToString());
 
                 return result;
             }
@@ -504,7 +504,7 @@ namespace Netnr.WeChat
                 sb.Append("{")
                     .Append('"' + "encrypt_code" + '"' + ":").Append(encrypt_code)
                     .Append("}");
-                var result = HttpTo.Post(url, sb.ToString());
+                var result = Core.HttpTo.Post(url, sb.ToString());
 
                 return result;
             }
@@ -533,7 +533,7 @@ namespace Netnr.WeChat
                   .Append('"' + "card_id" + '"' + ":").Append(card_id)
                   .Append('"' + "new_code" + '"' + ":").Append(new_code)
                   .Append("}");
-                var result = HttpTo.Post(url, sb.ToString());
+                var result = Core.HttpTo.Post(url, sb.ToString());
 
                 return result;
             }
@@ -564,7 +564,7 @@ namespace Netnr.WeChat
                     sb.Append('"' + "card_id" + '"' + ":").Append(card_id);
                 }
                 sb.Append("}");
-                var result = HttpTo.Post(url, sb.ToString());
+                var result = Core.HttpTo.Post(url, sb.ToString());
 
                 return result;
             }
@@ -619,7 +619,7 @@ namespace Netnr.WeChat
         public static string BatchAdd(string access_token, object location_list)
         {
             var url = string.Format("https://api.weixin.qq.com/card/location/batchadd?access_token={0}", access_token);
-            var result = HttpTo.Post(url, location_list.ToJson());
+            var result = Core.HttpTo.Post(url, location_list.ToJson());
             return result;
         }
         /// <summary>
@@ -663,7 +663,7 @@ namespace Netnr.WeChat
                 .Append('"' + "offset" + '"' + ":").Append(offset)
                 .Append('"' + "count" + '"' + ":").Append(count)
                 .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
 
             return result;
         }
@@ -699,7 +699,7 @@ namespace Netnr.WeChat
               .Append('"' + "card_id" + '"' + ":").Append(card_id)
               .Append('"' + "balance" + '"' + ":").Append(balance)
               .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
 
             return result;
         }
@@ -735,7 +735,7 @@ namespace Netnr.WeChat
         {
             var url = string.Format("https://api.weixin.qq.com/card/meetingticket/updateuser?access_token={0}", access_token);
 
-            var result = HttpTo.Post(url, tickect.ToJson());
+            var result = Core.HttpTo.Post(url, tickect.ToJson());
 
             return result;
         }
@@ -780,7 +780,7 @@ namespace Netnr.WeChat
         {
             var url = string.Format("https://api.weixin.qq.com/card/membercard/activate?access_token={0}", access_token);
 
-            var result = HttpTo.Post(url, memeber_card.ToJson());
+            var result = Core.HttpTo.Post(url, memeber_card.ToJson());
 
             return result;
         }
@@ -818,7 +818,7 @@ namespace Netnr.WeChat
               .Append('"' + "add_balance" + '"' + ":").Append(add_balance)
               .Append('"' + "record_balance" + '"' + ":").Append(record_balance)
               .Append("}");
-            var result = HttpTo.Post(url, sb.ToString());
+            var result = Core.HttpTo.Post(url, sb.ToString());
 
             return result;
         }
@@ -861,7 +861,7 @@ namespace Netnr.WeChat
         {
             var url = string.Format("https://api.weixin.qq.com/card/movieticket/updateuser?access_token={0}", access_token);
 
-            var result = HttpTo.Post(url, tickect.ToJson());
+            var result = Core.HttpTo.Post(url, tickect.ToJson());
 
             return result;
         }
@@ -903,7 +903,7 @@ namespace Netnr.WeChat
         public static string Create(string access_token, object action)
         {
             var url = string.Format("https://api.weixin.qq.com/card/qrcode/create?access_token={0}", access_token);
-            var result = HttpTo.Post(url, action.ToJson());
+            var result = Core.HttpTo.Post(url, action.ToJson());
             var ticket = result.ToJObject()["ticket"].ToString();
             return string.Format("https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket={0}", ticket);
         }
@@ -930,7 +930,7 @@ namespace Netnr.WeChat
             .Append('"' + "action_name" + '"' + ": " + '"' + action_name + '"' + ",")
             .Append('"' + "action_info" + '"' + ": " + "{" + '"' + "scene" + '"' + ":{" + '"' + "scene_id" + '"' + ":" + scene_id.ToString() + "}}}");
 
-            var result = HttpTo.Post(
+            var result = Core.HttpTo.Post(
                 string.Format("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token={0}", token),
                 content.ToString());
             return result;
@@ -965,7 +965,7 @@ namespace Netnr.WeChat
         public static string Set(string access_token, object testwhitelist)
         {
             var url = string.Format("https://api.weixin.qq.com/card/testwhitelist/set?access_token={0}", access_token);
-            var result = HttpTo.Post(url, testwhitelist.ToJson());
+            var result = Core.HttpTo.Post(url, testwhitelist.ToJson());
 
             return result;
         }

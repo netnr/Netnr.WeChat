@@ -10,9 +10,9 @@
     <PackageProjectUrl>https://github.com/netnr/Netnr.WeChat</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/netnr/static/master/favicon.ico</PackageIconUrl>
     <PackageTags>netnr wechat weixin 微信 公众号</PackageTags>
-    <PackageReleaseNotes>支持 .net core 与 .net framework</PackageReleaseNotes>
+    <PackageReleaseNotes>修改项目依赖 Netnr.Core 常用的类库，项目整合</PackageReleaseNotes>
     <DocumentationFile>H:\ROOM\Netnr.WeChat\src\Netnr.WeChat\Netnr.WeChat\Netnr.WeChat.xml</DocumentationFile>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net40|AnyCPU'">
@@ -20,7 +20,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Netnr.Core" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
   </ItemGroup>
 
 </Project>

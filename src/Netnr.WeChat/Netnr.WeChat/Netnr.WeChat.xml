@@ -1556,110 +1556,12 @@
             <param name="url"></param>
             <param name="stream"></param>
         </member>
-        <member name="M:Netnr.WeChat.Extend.ToJson(System.Object,System.String)">
-            <summary>
-            object 转 JSON 字符串
-            </summary>
-            <param name="obj"></param>
-            <param name="DateTimeFormat">时间格式化</param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.ToJObject(System.String)">
-            <summary>
-            解析 JSON字符串 为JObject对象
-            </summary>
-            <param name="json">JSON字符串</param>
-            <returns>JObject对象</returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.ToJArray(System.String)">
-            <summary>
-            解析 JSON字符串 为JArray对象
-            </summary>
-            <param name="json">JSON字符串</param>
-            <returns>JArray对象</returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.OfJson(System.String)">
-            <summary>
-            字符串 JSON转义
-            </summary>
-            <param name="s"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.ToStringOrEmpty(Newtonsoft.Json.Linq.JToken)">
-            <summary>
-            把jArray里面的json对象转为字符串
-            </summary>
-            <param name="jt"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.ToEncode(System.String,System.String)">
-            <summary>
-            编码
-            </summary>
-            <param name="uri"></param>
-            <param name="charset"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.ToDecode(System.String)">
-            <summary>
-            解码
-            </summary>
-            <param name="uriToDecode"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.Extend.ToTimestamp(System.DateTime)">
-            <summary>
-            将Datetime转换成时间戳
-            </summary>
-            <param name="datetime"></param>
-            <returns></returns>
-        </member>
         <member name="M:Netnr.WeChat.Extend.GetText(System.Xml.XmlDocument,System.String)">
             <summary>
             获取XmlDocument的内容
             </summary>
             <param name="xmlDocument"></param>
             <param name="nodeName">节点名称</param>
-            <returns></returns>
-        </member>
-        <member name="T:Netnr.WeChat.HttpTo">
-            <summary>
-            HTTP请求
-            </summary>
-        </member>
-        <member name="M:Netnr.WeChat.HttpTo.HWRequest(System.String,System.String,System.String,System.String)">
-            <summary>
-            HttpWebRequest对象
-            </summary>
-            <param name="url">地址</param>
-            <param name="type">请求类型，默认GET</param>
-            <param name="data">POST数据</param>
-            <param name="charset">编码，默认utf-8</param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.HttpTo.Url(System.Net.HttpWebRequest,System.String)">
-            <summary>
-            HTTP请求
-            </summary>
-            <param name="request">HttpWebRequest对象</param>
-            <param name="charset">编码，默认utf-8</param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.HttpTo.Get(System.String,System.String)">
-            <summary>
-            GET请求
-            </summary>
-            <param name="url">地址</param>
-            <param name="charset">编码，默认utf-8</param>
-            <returns></returns>
-        </member>
-        <member name="M:Netnr.WeChat.HttpTo.Post(System.String,System.String,System.String)">
-            <summary>
-            POST请求
-            </summary>
-            <param name="url">地址</param>
-            <param name="data">POST数据</param>
-            <param name="charset">编码，默认utf-8</param>
             <returns></returns>
         </member>
         <member name="M:Netnr.WeChat.IWeChatExecutor.Execute(Netnr.WeChat.WeChatMessage)">
